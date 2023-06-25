@@ -29,6 +29,7 @@ Here are some ideas to get you started:
   <img src="https://github.com/giaptai/giaptai/assets/102518847/3615f653-8e7f-4f87-8d04-add0163b68df"/>
 </p>
 
+```kotlin
      // Define an interface for the callback
      interface MyCallback {
          fun onResult(result: String)
@@ -69,4 +70,4 @@ Here are some ideas to get you started:
             println("Received callback value: $myvalue")
         }
     }
-
+```
