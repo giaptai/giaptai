@@ -29,20 +29,20 @@ Here are some ideas to get you started:
   <img src="https://github.com/giaptai/giaptai/assets/102518847/3615f653-8e7f-4f87-8d04-add0163b68df"/>
 </p>
 
-   // Define an interface for the callback
-   interface MyCallback {
-       fun onResult(result: String)
-   }
+     // Define an interface for the callback
+     interface MyCallback {
+         fun onResult(result: String)
+     }
 
-  // Define a function that takes a callback as a parameter
-  fun performAsyncTask(callback: MyCallback) {
-      // Simulate an asynchronous task
-      Thread.sleep(2000)
-      val result = "Task completed"
-      
-      // Invoke the callback with the result
-      callback.onResult(result)
-  }
+     // Define a function that takes a callback as a parameter
+     fun performAsyncTask(callback: MyCallback) {
+         // Simulate an asynchronous task
+         Thread.sleep(2000)
+         val result = "Task completed"
+         
+         // Invoke the callback with the result
+         callback.onResult(result)
+     }
 
   // Call the function with an object that implements the callback interface
   performAsyncTask(object : MyCallback {
