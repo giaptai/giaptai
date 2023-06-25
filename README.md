@@ -44,29 +44,29 @@ Here are some ideas to get you started:
          callback.onResult(result)
      }
 
-  // Call the function with an object that implements the callback interface
-  performAsyncTask(object : MyCallback {
-      override fun onResult(result: String) {
-          // Handle the result of the async task
-          println(result)
-      }
-  })
+    // Call the function with an object that implements the callback interface
+    performAsyncTask(object : MyCallback {
+        override fun onResult(result: String) {
+            // Handle the result of the async task
+            println(result)
+        }
+    })
+  
+    // Define a function that takes a callback as a parameter
+    fun callCallbacks(demo: (myvalue: String) -> Unit) {
+        // Do some work here
+        var a = 50
+        var b = 20
+        // Invoke the callback with a value
+        demo((a+b).toString())
+    }
 
-  // Define a function that takes a callback as a parameter
-  fun callCallbacks(demo: (myvalue: String) -> Unit) {
-      // Do some work here
-      var a = 50
-      var b = 20
-      // Invoke the callback with a value
-      demo((a+b).toString())
-  }
-
-  // Define a function that calls the function with a callback
-  fun getCallbacks() {
-      // Call the function with a lambda expression that defines the callback behavior
-      callCallbacks { myvalue ->
-          // Handle the callback value
-          println("Received callback value: $myvalue")
-      }
-  }
+    // Define a function that calls the function with a callback
+    fun getCallbacks() {
+        // Call the function with a lambda expression that defines the callback behavior
+        callCallbacks { myvalue ->
+            // Handle the callback value
+            println("Received callback value: $myvalue")
+        }
+    }
 
